@@ -8,20 +8,21 @@ function App() {
   const [result, setResult] = useState(null);
 
   const generateContent = async () => {
-    // Fake data for now (we will connect IBM later)
-    setResult({
-      script: "Hook: Ever wondered how computers detect anagrams?",
-      storyboard: [
-        "Scene 1: Hook animation",
-        "Scene 2: Sorting letters",
-        "Scene 3: Code explanation",
-      ],
-      mentor: {
-        clarity: 8,
-        engagement: 7,
-        suggestions: "Improve hook and add real-world example",
+    const response = await fetch("http://localhost:3001/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        topic,
+        audience,
+        platform,
+      }),
     });
+
+    const data = await response.json();
+    console.log("🚀 ~ generateContent ~ data:", data)
+    setResult(data);
   };
 
   return (
@@ -75,3 +76,4 @@ function App() {
 }
 
 export default App;
+
