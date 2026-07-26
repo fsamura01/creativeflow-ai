@@ -2,8 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const { reviewPackage } = require('../controllers/mentorController');
+const { createScript } = require('../controllers/scriptController');
 
-router.post('/', reviewPackage);
+router.post('/', createScript);
 
 module.exports = router;
