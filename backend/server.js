@@ -12,12 +12,14 @@ const scriptRouter = require('./routes/script');
 const storyboardRouter = require('./routes/storyboard');
 const mentorRouter = require('./routes/mentor');
 const refineRouter = require('./routes/refine');
+const visualPromptsRouter = require('./routes/visualPrompts');
 
 app.use('/creative-brief', creativeBriefRouter);
 app.use('/generate-script', scriptRouter);
 app.use('/generate-storyboard', storyboardRouter);
 app.use('/mentor-review', mentorRouter);
 app.use('/refine', refineRouter);
+app.use('/visual-prompts', visualPromptsRouter);
 
 const PORT = 3001;
 

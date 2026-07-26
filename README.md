@@ -147,7 +147,7 @@ creativeflow-ai/
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/your-username/creativeflow-ai.git
+git clone https://github.com/fsamura01/creativeflow-ai.git
 cd creativeflow-ai
 
 # Install backend dependencies
@@ -195,7 +195,7 @@ npm run dev
 # Local: http://localhost:5173
 ```
 
-Open **http://localhost:5173** in your browser.
+Open **<http://localhost:5173>** in your browser.
 
 ---
 
@@ -204,6 +204,7 @@ Open **http://localhost:5173** in your browser.
 All endpoints accept and return `application/json`.
 
 ### `POST /creative-brief`
+
 ```json
 // Request
 { "topic": "...", "audience": "...", "platform": "...", "goal": "..." }
@@ -213,6 +214,7 @@ All endpoints accept and return `application/json`.
 ```
 
 ### `POST /generate-script`
+
 ```json
 // Request
 { "creativeBrief": { ... } }
@@ -222,6 +224,7 @@ All endpoints accept and return `application/json`.
 ```
 
 ### `POST /generate-storyboard`
+
 ```json
 // Request
 { "script": { ... }, "creativeBrief": { ... } }
@@ -231,6 +234,7 @@ All endpoints accept and return `application/json`.
 ```
 
 ### `POST /mentor-review`
+
 ```json
 // Request
 { "creativeBrief": { ... }, "script": { ... }, "storyboard": { ... } }
@@ -240,6 +244,7 @@ All endpoints accept and return `application/json`.
 ```
 
 ### `POST /refine`
+
 ```json
 // Request
 { "section": "script", "current": { ... }, "instruction": "make the hook more energetic", "context": { ... } }

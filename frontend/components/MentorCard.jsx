@@ -98,7 +98,7 @@ export default function MentorCard({ feedback, onRefine, isRefining }) {
     <div style={cardStyle}>
       <div style={headingRowStyle}>
         <h2 style={headingStyle}>Mentor Feedback</h2>
-        <span style={stepBadgeStyle}>Step 4 of 4</span>
+        <span style={stepBadgeStyle}>Step 5 of 5</span>
       </div>
 
       <div style={scoreStyle}>Score: {overallScore}/10</div>

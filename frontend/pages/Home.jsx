@@ -3,11 +3,13 @@ import InputForm from '../components/InputForm';
 import CreativeBriefCard from '../components/CreativeBriefCard';
 import ScriptCard from '../components/ScriptCard';
 import StoryboardCard from '../components/StoryboardCard';
+import VisualPromptsCard from '../components/VisualPromptsCard';
 import MentorCard from '../components/MentorCard';
 import {
   generateCreativeBrief,
   generateScript,
   generateStoryboard,
+  generateVisualPrompts,
   reviewWithMentor,
   refineSection,
 } from '../services/api';
@@ -85,16 +87,18 @@ const sectionStyle = {
 };
 
 const STEPS = [
-  { key: 'brief',      label: 'Generating creative brief…',   done: 'Creative brief ready' },
-  { key: 'script',     label: 'Writing script…',              done: 'Script written' },
-  { key: 'storyboard', label: 'Building storyboard…',         done: 'Storyboard built' },
-  { key: 'feedback',   label: 'Getting mentor feedback…',     done: 'Mentor review complete' },
+  { key: 'brief',         label: 'Generating creative brief…',   done: 'Creative brief ready' },
+  { key: 'script',        label: 'Writing script…',              done: 'Script written' },
+  { key: 'storyboard',    label: 'Building storyboard…',         done: 'Storyboard built' },
+  { key: 'visualPrompts', label: 'Generating visual prompts…',   done: 'Visual prompts ready' },
+  { key: 'feedback',      label: 'Getting mentor feedback…',     done: 'Mentor review complete' },
 ];
 
 export default function Home() {
   const [brief, setBrief] = useState(null);
   const [script, setScript] = useState(null);
   const [storyboard, setStoryboard] = useState(null);
+  const [visualPrompts, setVisualPrompts] = useState(null);
   const [feedback, setFeedback] = useState(null);
   const [platform, setPlatform] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -102,7 +106,7 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   // Per-section refine loading flags
-  const [refining, setRefining] = useState({ brief: false, script: false, storyboard: false, feedback: false });
+  const [refining, setRefining] = useState({ brief: false, script: false, storyboard: false, visualPrompts: false, feedback: false });
 
   function setRefiningSection(section, value) {
     setRefining((prev) => ({ ...prev, [section]: value }));
@@ -116,6 +120,7 @@ export default function Home() {
       if (section === 'brief') setBrief(refined);
       else if (section === 'script') setScript(refined);
       else if (section === 'storyboard') setStoryboard(refined);
+      else if (section === 'visualPrompts') setVisualPrompts(refined);
       else if (section === 'feedback') setFeedback(refined);
     } catch (err) {
       setError(err.message);
@@ -131,6 +136,7 @@ export default function Home() {
     setBrief(null);
     setScript(null);
     setStoryboard(null);
+    setVisualPrompts(null);
     setFeedback(null);
     setPlatform(data.platform);
 
@@ -145,6 +151,14 @@ export default function Home() {
 
       const storyboardResult = await generateStoryboard({ script: scriptResult, creativeBrief: briefResult });
       setStoryboard(storyboardResult);
+      setActiveStep('visualPrompts');
+
+      const visualPromptsResult = await generateVisualPrompts({
+        scenes: storyboardResult.scenes,
+        platform: data.platform,
+        brief: briefResult,
+      });
+      setVisualPrompts(visualPromptsResult);
       setActiveStep('feedback');
 
       const mentorResult = await reviewWithMentor({ creativeBrief: briefResult, script: scriptResult, storyboard: storyboardResult });
@@ -213,6 +227,15 @@ export default function Home() {
           platform={platform}
           onRefine={storyboard ? (instruction) => handleRefine('storyboard', storyboard, instruction, { brief, script }) : null}
           isRefining={refining.storyboard}
+        />
+      </div>
+
+      <div style={sectionStyle}>
+        <VisualPromptsCard
+          visualPrompts={visualPrompts}
+          platform={platform}
+          onRefine={visualPrompts ? (instruction) => handleRefine('visualPrompts', visualPrompts, instruction, { brief, storyboard }) : null}
+          isRefining={refining.visualPrompts}
         />
       </div>
 

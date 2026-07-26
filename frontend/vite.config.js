@@ -11,6 +11,7 @@ export default defineConfig({
       '/generate-storyboard': 'http://localhost:3001',
       '/mentor-review': 'http://localhost:3001',
       '/refine': 'http://localhost:3001',
+      '/visual-prompts': 'http://localhost:3001',
     },
   },
 })

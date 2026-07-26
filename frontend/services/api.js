@@ -30,3 +30,7 @@ export async function reviewWithMentor({ creativeBrief, script, storyboard }) {
 export async function refineSection({ section, current, instruction, context }) {
   return post('/refine', { section, current, instruction, context });
 }
+
+export async function generateVisualPrompts({ scenes, platform, brief }) {
+  return post('/visual-prompts', { scenes, platform, brief });
+}
