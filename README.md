@@ -40,3 +40,32 @@ CreativeFlow AI is an AI-powered creative partner that helps users:
 ## Challenge Theme
 
 Reimagine Creative Industries with AI
+
+                    CreativeFlow AI
+
+┌─────────────────────────────────────────────┐
+│               React Frontend                │
+│                                             │
+│  Home Page                                  │
+│  Creative Brief                             │
+│  Script                                     │
+│  Storyboard                                 │
+│  Mentor Report                              │
+└───────────────────┬─────────────────────────┘
+                    │ REST API
+                    ▼
+┌─────────────────────────────────────────────┐
+│             Node.js / Express               │
+│                                             │
+│  /creative-brief                            │
+│  /generate-script                           │
+│  /generate-storyboard                       │
+│  /mentor-review                             │
+└───────────────────┬─────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────┐
+│              IBM watsonx.ai                 │
+│                                             │
+│         Granite-4-h-small                   │
+└─────────────────────────────────────────────┘
