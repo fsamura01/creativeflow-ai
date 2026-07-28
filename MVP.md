@@ -5,9 +5,11 @@
 - Topic
 - Audience
 - Platform
+- goal
 
 ## Outputs
 
+- Brief
 - Script
 - Storyboard
 - Visual Prompts
