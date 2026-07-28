@@ -37,11 +37,9 @@ Mentor Review    →  AI scores and coaches you to improve
 
 ## Demo
 
-The image below is a DSA educational infographic — exactly the kind of content a creator would bring to CreativeFlow AI. They have a concept. They need a script, storyboard, and production plan to turn it into a YouTube video.
+This is a real end-to-end example of CreativeFlow AI in action.
 
-![Demo concept — Two Sum infographic used as CreativeFlow AI input](docs/demo-concept.png)
-
-**Input given to CreativeFlow AI:**
+**Step 1 — Input a topic:**
 
 | Field | Value |
 |---|---|
@@ -50,14 +48,37 @@ The image below is a DSA educational infographic — exactly the kind of content
 | Platform | YouTube |
 | Goal | Educate |
 
-**What CreativeFlow AI produces from this input:**
-- A **Creative Brief** — campaign title, core message, hook idea, tone, key takeaway
-- A **Script** — hook, full body, call to action (copy-ready in one click)
-- A **Storyboard** — 3 scenes with camera directions and narration
-- **Visual Prompts** — Midjourney/ChatGPT-ready image prompts formatted at 16:9 for YouTube
-- A **Mentor Review** — scored feedback with specific strengths, improvements, and next steps
+**Step 2 — CreativeFlow AI generates a complete script:**
 
-The creator goes from infographic concept to a full video production package in under 5 minutes.
+```
+HOOK
+Ever stared at a coding problem and felt like you're untangling a messy ball of yarn?
+Let's untangle the Two Sum problem together and make it crystal clear!
+
+SCRIPT
+Alright, let's dive into the Two Sum challenge! Imagine you've got a list of numbers
+and you need to find two that add up to a specific target. Sounds tricky, right?
+But here's the magic: you can solve it in just one pass using a hash map!
+
+First, create an empty hash map. Then, loop through your list. For each number,
+check if its complement (target minus the current number) is already in the map.
+If it is — boom! You've found your pair. If not, add the current number and keep going.
+
+It's all about finding complements. Once you see this pattern, Two Sum and similar
+challenges will feel like a walk in the park. You've got this!
+
+CALL TO ACTION
+Hit the like button, drop a comment with a problem you're tackling, and subscribe
+for more beginner-friendly coding breakdowns! Let's crack code together!
+```
+
+**Step 3 — Creator copies the script and pastes it into ChatGPT image generation.**
+
+**Step 4 — The result:**
+
+![Educational infographic generated from CreativeFlow AI script — Two Sum with Hash Maps](docs/demo-concept.png)
+
+> This infographic was created by pasting the CreativeFlow AI-generated script directly into ChatGPT. No manual writing. No design brief. Just a topic in, and a publishable visual asset out.
 
 ---
 
