@@ -18,17 +18,46 @@ CreativeFlow AI compresses a multi-hour creative workflow into minutes. Enter a 
 Raw Idea
    │
    ▼
-Creative Brief  →  AI structures your thinking
+Creative Brief   →  AI structures your thinking
    │
    ▼
-Script          →  AI writes it, you refine it
+Script           →  AI writes it, you refine it
    │
    ▼
-Storyboard      →  AI plans the visuals + generates image prompts
+Storyboard       →  AI plans the visuals
    │
    ▼
-Mentor Review   →  AI scores and coaches you to improve
+Visual Prompts   →  AI generates image prompts for ChatGPT / Midjourney
+   │
+   ▼
+Mentor Review    →  AI scores and coaches you to improve
 ```
+
+---
+
+## Demo
+
+The image below is a DSA educational infographic — exactly the kind of content a creator would bring to CreativeFlow AI. They have a concept. They need a script, storyboard, and production plan to turn it into a YouTube video.
+
+![Demo concept — Two Sum infographic used as CreativeFlow AI input](docs/demo-concept.png)
+
+**Input given to CreativeFlow AI:**
+
+| Field | Value |
+|---|---|
+| Topic | Two Sum Problem explained with Hash Maps |
+| Audience | Beginner |
+| Platform | YouTube |
+| Goal | Educate |
+
+**What CreativeFlow AI produces from this input:**
+- A **Creative Brief** — campaign title, core message, hook idea, tone, key takeaway
+- A **Script** — hook, full body, call to action (copy-ready in one click)
+- A **Storyboard** — 3 scenes with camera directions and narration
+- **Visual Prompts** — Midjourney/ChatGPT-ready image prompts formatted at 16:9 for YouTube
+- A **Mentor Review** — scored feedback with specific strengths, improvements, and next steps
+
+The creator goes from infographic concept to a full video production package in under 5 minutes.
 
 ---
 
