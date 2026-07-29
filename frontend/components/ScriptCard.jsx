@@ -106,7 +106,7 @@ export default function ScriptCard({ script, onRefine, isRefining }) {
     <div style={cardStyle}>
       <div style={headingRowStyle}>
         <h2 style={headingStyle}>Script</h2>
-        <span style={stepBadgeStyle}>Step 2 of 4</span>
+        <span style={stepBadgeStyle}>Step 2 of 5</span>
         <button style={copyBtnStyle(copied)} onClick={handleCopy}>
           {copied ? 'Copied ✓' : 'Copy'}
         </button>

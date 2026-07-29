@@ -143,7 +143,7 @@ export default function StoryboardCard({ storyboard, platform, onRefine, isRefin
     <div style={cardStyle}>
       <div style={headingRowStyle}>
         <h2 style={headingStyle}>Storyboard</h2>
-        <span style={stepBadgeStyle}>Step 3 of 4</span>
+        <span style={stepBadgeStyle}>Step 3 of 5</span>
         <button style={copyBtnStyle(copied)} onClick={handleCopyPrompts}>
           {copied ? 'Copied ✓' : 'Copy Image Prompts'}
         </button>

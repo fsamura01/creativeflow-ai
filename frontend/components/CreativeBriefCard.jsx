@@ -66,7 +66,7 @@ export default function CreativeBriefCard({ brief, onRefine, isRefining }) {
     <div style={cardStyle}>
       <div style={headingRowStyle}>
         <h2 style={headingStyle}>Creative Brief</h2>
-        <span style={stepBadgeStyle}>Step 1 of 4</span>
+        <span style={stepBadgeStyle}>Step 1 of 5</span>
       </div>
 
       <div style={fieldStyle}>
