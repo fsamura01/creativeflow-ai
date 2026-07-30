@@ -37,6 +37,8 @@ Mentor Review    →  AI scores and coaches you to improve
 
 ## Demo
 
+🎬 **[Watch the demo on Loom](https://www.loom.com/share/b6bd5f4e5fd347b1abcbd4d8b68a6b0f)**
+
 This is a real end-to-end example of CreativeFlow AI in action.
 
 **Step 1 — Input a topic:**
